@@ -1,0 +1,72 @@
+---
+
+fabric:
+  hosts:
+    server01:
+      public_ip_address: 34.105.49.255
+      private_ip_address: 10.138.0.2
+      core_ip_address: 10.138.0.2
+      canary: false
+      node_key_address: 97ff9b69f042f931bb9d0ad9994c57d960802087
+      fabric_secret: test
+      enable_main_dns: False
+    server02:
+      public_ip_address: 34.65.65.227
+      private_ip_address: 10.172.0.2
+      core_ip_address: 10.172.0.2
+      canary: false
+      node_key_address: df20e739e20afa50a21fcb6a4a84c34935dedfd8
+      fabric_secret: test
+      enable_main_dns: False
+  vars:
+    kms_key_address: 87fed752cc80c6952c8898f54da15e5cfe602b48
+    kms_secret: test
+    service_listen_address: 127.0.0.1
+    id_and_gid_offset: 10
+    enable_gpu: false
+
+all:
+  vars:
+    elv_blockchain_network_number: 955305
+    override_main_dns_name: main.net955305.contentfabric.io
+    elv_srv_username: srv-prod-305
+    elv_srv_groupname: srv-prod-305
+
+    installer_location: https://storage.googleapis.com/f3fb0a59e8df4d63b597486e95ca14bc/ansible
+    elvmasterd_tgz: elvmasterd-b4259d-develop.tgz
+    qfab_tgz: qfab-cbd79e-release-3.0.tgz
+
+    fabric_net_id: ispc2RUoRe9eR2v33HARQUVSp1rYXzw1
+    debug_frame_level: false
+    gpu_job_size: 24
+
+    qfab_logging:
+      level: debug
+      maxsize: 100
+      maxbackups: 10
+
+    elvmasterd_logging:
+      verbosity: 4
+      maxbackups: 3
+      maxage: 3
+      maxsize: 100
+
+    qfab_api_port: 8008
+    space_id:
+      space: ispc2RUoRe9eR2v33HARQUVSp1rYXzw1
+      name: main
+
+    elvmasterd_port:
+      rpc: 8545
+      proxy: 6545
+      api: 40304
+
+    routes_to_use:
+      profile: main-955305
+      static: false
+      predicted: false
+
+    eluvio_fqdn:
+      config_stub: main
+      host_stub: host
+      domain: priv.contentfabric.io

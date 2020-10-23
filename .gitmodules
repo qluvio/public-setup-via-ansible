@@ -1,0 +1,30 @@
+[submodule "roles/eluvio-ansible-nginx"]
+	path = roles/eluvio-ansible-nginx
+	url = git@github.com:qluvio/eluvio-ansible-nginx
+[submodule "roles/eluvio-ansible-service-user"]
+	path = roles/eluvio-ansible-service-user
+	url = git@github.com:qluvio/eluvio-ansible-service-user
+[submodule "roles/eluvio-ansible-elvmasterd-configure"]
+	path = roles/eluvio-ansible-elvmasterd-configure
+	url = git@github.com:qluvio/eluvio-ansible-elvmasterd-configure
+[submodule "roles/eluvio-ansible-elvmasterd-install"]
+	path = roles/eluvio-ansible-elvmasterd-install
+	url = git@github.com:qluvio/eluvio-ansible-elvmasterd-install
+[submodule "roles/eluvio-ansible-fabric-install"]
+	path = roles/eluvio-ansible-fabric-install
+	url = git@github.com:qluvio/eluvio-ansible-fabric-install
+[submodule "roles/eluvio-ansible-fabric-configure"]
+	path = roles/eluvio-ansible-fabric-configure
+	url = git@github.com:qluvio/eluvio-ansible-fabric-configure
+[submodule "roles/eluvio-ansible-customizations"]
+	path = roles/eluvio-ansible-customizations
+	url = git@github.com:qluvio/eluvio-ansible-customizations.git
+[submodule "roles/legacy-opt-eluvio-install"]
+	path = roles/legacy-opt-eluvio-install
+	url = git@github.com:qluvio/legacy-opt-eluvio-install.git
+[submodule "roles/eluvio-ansible-helper-baseline"]
+	path = roles/eluvio-ansible-helper-baseline
+	url = git@github.com:qluvio/eluvio-ansible-helper-baseline
+[submodule "roles/eluvio-ansible-js-tests"]
+	path = roles/eluvio-ansible-js-tests
+	url = git@github.com:qluvio/eluvio-ansible-js-tests.git

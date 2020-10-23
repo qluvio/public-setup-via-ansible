@@ -1,0 +1,8 @@
+---
+- name: Reconfigure the qfab config
+  hosts: fabric
+  gather_facts: no
+  become: true
+  become_user: "{{ elv_srv_username }}"
+  roles:
+    - eluvio-ansible-fabric-configure

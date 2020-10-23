@@ -1,0 +1,34 @@
+---
+- name: "Setting up {{ elv_srv_username }}"
+  hosts: fabric
+  gather_facts: no
+  become: true
+  become_user: root
+  roles:
+    - eluvio-ansible-service-user
+
+- name: Install elvmasterd
+  hosts: fabric
+  gather_facts: no
+  become: true
+  become_user: "{{ elv_srv_username }}"
+  roles:
+    - eluvio-ansible-elvmasterd-configure
+    - eluvio-ansible-elvmasterd-install
+
+- name: Install qfab
+  hosts: fabric
+  gather_facts: no
+  become: true
+  become_user: "{{ elv_srv_username }}"
+  roles:
+    - eluvio-ansible-fabric-install
+    - eluvio-ansible-fabric-configure
+
+- name: Install nginx
+  hosts: fabric
+  gather_facts: no
+  become: true
+  become_user: "{{ elv_srv_username }}"
+  roles:
+    - eluvio-ansible-nginx
